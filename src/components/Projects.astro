@@ -1,0 +1,167 @@
+---
+import GitHub from "./icons/GitHub.astro";
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+import Vidita from "./icons/Vidita.astro";
+import Esposa from "./icons/Esposa.astro";
+import Mujer from "./icons/MUJER.astro";
+import Potona from "./icons/Potona.astro";
+import Caderona from "./icons/Caderona.astro";
+import Increibles from "./icons/Increibles.astro";
+import Poderosos from "./icons/Poderosos.astro";
+import Buenos from "./icons/Buenos.astro";
+import Bondadosos from "./icons/Bondadosos.astro";
+import Hermosos from "./icons/Hermosos.astro";
+import Puros from "./icons/Puros.astro";
+import type { Image } from "astro:assets";
+
+const TAGS = {
+  NEXT: {
+    name: "Unicos",
+    class: "bg-[#6EC2A7] text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Nosotros",
+    class: "bg-[#6EC27D] text-white",
+    icon: Tailwind,
+  },
+  VIDITA: {
+    name: "Fuertes",
+    class: "bg-[#C27D6E] text-white",
+    icon: Vidita,
+  },
+  ESPOSITA: {
+    name: "Maravillosos",
+    class: "bg-[#C2A76E] text-white",
+    icon: Esposa,
+  },
+  MUJER: {
+    name: "Bonitos",
+    class: "bg-[#DE3163] text-white",
+    icon: Potona,
+  },
+  POTONA: {
+    name: "Inteligentes",
+    class: "bg-[#6495ED] text-white",
+    icon: Mujer,
+  },
+  CADERONA: {
+    name: "Nobles",
+    class: "bg-[#FF7F50] text-white",
+    icon: Caderona,
+  },
+  INCREIBLES: {
+    name: "Increibles",
+    class: "bg-[#03a572] text-white",
+    icon: Increibles,
+  },
+  PODEROSOS: {
+    name: "Poderosos",
+    class: "bg-[#ff4686] text-white",
+    icon: Poderosos,
+  },
+  BUENOS: {
+    name: "Buenos",
+    class: "bg-[#ababab] text-white",
+    icon: Buenos,
+  },
+  BONDADOSOS: {
+    name: "Bondadosos",
+    class: "bg-[#E7528A] text-white",
+    icon: Bondadosos,
+  },
+  HERMOSOS: {
+    name: "Hermosos",
+    class: "bg-[#C934EA] text-white",
+    icon: Hermosos,
+  },
+  PUROS: {
+    name: "Puros",
+    class: "bg-[#d843ba] text-white",
+    icon: Puros,
+  },
+};
+const PROJECTS = [
+  {
+    title: "Juntos somos imparables e invencinbles",
+    description:
+      "Amorcito los dos cada que estamos juntitos la pasamos increible somos uno mismo en escencia, nuestras mentes y nuestras almas se vuelven uno solo, cada que buscamos algo o tenemos un problema siempre le encontramos la solucion, juntos nos complementamos mas que nada y juntos logramos todo lo que queremos.",
+    image: "/projects/usar1.webp",
+    tags: [TAGS.NEXT, TAGS.VIDITA, TAGS.ESPOSITA],
+  },
+  {
+    title: "Somos nosotros",
+    description:
+      "Una infinidad de veces hemos dicho que los dos somos nosotros, esto debido a que somos todo, nuestra conexion, nuestro sentido del humor, nuestras bromitas (que aveces se pasan un poquito noma) los juegos, hasta el juguito de naranja y todo lo demas nos demuestra que solo nosotros somos nosotros desde lo raros que somos que lo admitimos que nos lo decian hasta la forma de ver y pensar en las cosas, en nuestras retroalimentaciones, somos nosotros, y que es nosotros pues es el termino perfecto para definir dos seres que se encontraron y se volvieron uno mismo tanto en el corazon como en el alma.",
+    image: "/projects/usar2.webp",
+    tags: [TAGS.MUJER, TAGS.POTONA, TAGS.CADERONA],
+  },
+  {
+    title: "Los animalitos exoticos",
+    description:
+      "Ese dia fue mas que maravilloso e increible ver tantos animalitos y tantos insectos, los urones como jugaban y hasta parecia que reian, el erizo que no clavaba pero que se hacia bolita y como le pusimos el gorrito para que este bien guapo, la serpierte que se dejaba tocar pero que a ambos nos daba nervios que se nos meta, la tarantula, la cucaracha y todos esos insectos que no quise tocar porque me ponian los pelos de punta pero tu toda valiente los tocaste por los dos, eso fue mas que perfecto y relucio lo noble, valiente y tan pura de corazon que eres.",
+    image: "/projects/final3.webp",
+    tags: [TAGS.INCREIBLES, TAGS.PODEROSOS, TAGS.BUENOS],
+  },
+  {
+    title: "Aventuras",
+    description:
+      "Siempre tenemos algo divertido, emocionante, maravilloso o cualquier adjetivo igual o superior para describir nuestros momentos o nuestras aventuras juntitos, esos momentos donde nos tomamos fotitos, cuando compartimos recuerdos y cuando reforzamos todo lo que sentimos por el otro, en cada uno de esos momentos vivo por ti y en cada una de esas aventuras nuestras simplemente pienso y agradezco a diosito que estes tu ahi a mi lado viviendo cada una porque mas alla de lo hermoso que pueda ser el lugar o lo increible de la situacion todo lo que siento es porque estas tú ahi y por eso siempre estare eternamente agradecido con Diosito y contigo mi amor.",
+    image: "/projects/usar3.webp",
+    tags: [TAGS.BONDADOSOS, TAGS.HERMOSOS, TAGS.PUROS],
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div
+            class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700
+           lg:hover:bg-gray-800/50"
+          >
+            <img
+              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            {/* <footer class="flex items-end justify-start mt-4 gap-x-4">
+              <Link class="size-4" />
+              Preview
+            </footer> */}
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>

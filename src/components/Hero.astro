@@ -1,0 +1,49 @@
+---
+const personalImageAlt = "Sebastian";
+import Badge from "@/components/Badge.astro";
+import LinkedInIcon from "@/components/icons/LinkedIn.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import SocialPill from "@/components/SocialPill.astro";
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-16"
+      src="/sebastian.webp"
+      alt={personalImageAlt}
+    />
+    <a
+      href="https://wa.me/941621589"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transitiotn md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para amarte</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+    Hi, soy Sebastian
+  </h1>
+  <p
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-red-500/90
+     [&>strong]:text-red-500/90 [&>strong]:font-semibold dark:text-gray-300"
+  >
+    +1000 años y toda la vida <strong
+      >esperando tu llegada para poder amarte por siempre</strong
+    > con todo mi corazon y mi vida ❤️. Con infinitas maestrias y especialidades
+    para ser tu persona.
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="mailto:pwn27sbx@gmail.com">
+      <MailIcon class="size-4" />
+      Hablame hasta por mail
+    </SocialPill>
+    <SocialPill href="https://discord.com/channels/@me/1127611431244791859">
+      <LinkedInIcon class="size-4" />
+      Sino por discord
+    </SocialPill>
+  </nav>
+</div>

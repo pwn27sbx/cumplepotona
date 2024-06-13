@@ -1,0 +1,44 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCIE = [
+  {
+    date: "Actualmente...",
+    title: "Amando a mi vidita",
+    company: "Gabs Inc",
+    description:
+      "Amor de mi vida soy la persona mas feliz en toda la existencia porque estas aqui, porque me elegiste y me diste la oportunidad de poder pertenecer a tu vida, me aceptaste asi como soy todo rarito y me amaste por eso amor de mi vida hoy mas que nunca quiero que sepas que tu eres mi amor y mi vida y por ende mi vida es tuya y te pertenece.",
+    link: "https://twitch.tv/midudev",
+  },
+  {
+    date: "Noviembre 2023",
+    title: "Final del Serums",
+    company: "Patito Inc",
+    description:
+      "Me invitaste a ir contigo para ayudarte y acompañarte en el proceso del final de tu serums, la emocion y felicidad que senti era algo inconmesurable, el poder estar ahi contigo, correr e ir de un lado para otro pudiendo ayudarte me hizo extremadamente feliz, haber podido compartir tiempito juntos en cusco poder haber paseado y conocido, haber estado contigo a tu lado fue algo indescriptible para mi que solo me hizo amarte mas y querer pasar cada dia de mi vida contigo siempre mas de lo que ya lo queria, visitar tantos lugares y tener tantos hermosos recuerdos solo podian ser posible porque tu estabas ahi porque no importa el lugar sino lo que importa es que estes tú.",
+  },
+  {
+    date: "Epocas diversas",
+    title: "Airbnb",
+    company: "Potoncita Inc",
+    description:
+      "Nos quedamos juntitos en el airbnb, realmente no existe un solo recuerdo malo de esto ya que todos son maravillosos, quedarnos juntos me hace sentir en un hogar porque tu eres mi hogar, desde aquel airbnb donde conocimos a una señora agradable y a su michi, ir a la fiesta de halloween y divertirnos muchisimo hasta en la casa del señor del perror amigable donde hablamos de todo inclusive de Dios, cada fecha que estuve contigo fue mas que increible y quiero agradecerte por eso amor, porque siempre me haces sentir feliz, pleno y mas que nada me haces sentir que tu eres mi hogar y mi familia.",
+  },
+  {
+    date: "Otros tiempos diversos",
+    title: "Cada Salidita",
+    company: "Cachetona Inc",
+    description:
+      "Cada que salimos amor, cada ves que estamos juntos es maravillosa me haces sentir amado y sentir muy seguro, me entregas alegria y como siempre te dije mi enfermerita sanandome y curandome cada que nos vemos, ir al cine, comer juntitos, caminar, ir por un helado o hacer tramites como cuando te acompañe a entregar papales que me mostraste una nueva parte de la ciudad o como cuando me pintaste el cabello son todas experiencias que amo desde la que podria ser las mas pequeña (que para nada lo es) como solo vernos un ratito porque te visito en tu trabajito hasta tener dias juntos son perfectos amor y no hay nada mas que quiera en la vida que eso, te amo mucho amor de mi vida, mi cosita bella hermosa, mi amor, mi esposita, mi mujercita, mi enfermerita, mi corazon de melon, mi todito, muchas gracias por todo amor.",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
